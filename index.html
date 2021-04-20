@@ -25,7 +25,7 @@
                     <a class="nav-link active" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/#">Github Repository</a>
+                    <a class="nav-link" href="https://github.com/hammadmaqsood24/CAOAssignment-3/tree/main/CAO%20OS%20Assignment" target="_blank">Github Repository</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://my.indeed.com/p/muhammadhammadm-b3nzow8" target="_blank">Resume</a>
@@ -36,7 +36,7 @@
     <div class="container" style="padding-top: 50px;">
         <main>
             <h1>CAO Assignmnet#3</h1>
-            <p>Posted by <a href="#">Muhammad Hammad Maqsood</a> on <span class="glyphicon glyphicon-time"></span> 20 April, 2021</p>
+            <p>Posted by <a href="#">Muhammad Hammad Maqsood</a> on 20 April, 2021</p>
             <hr>
             <div>
                 <img class="img-responsive" src="./imgs/output.JPG" alt="output image">
@@ -149,7 +149,7 @@
                 <hr>
                 <h2>Files and Their Purpose</h2>
                 <p>We will briefly explain the purpose of each file one by one.</p>
-                <a href=""><h3>Dockerfile</h3></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/buildenv/Dockerfile"><h3>Dockerfile</h3></a>
                 <p>Docker allows us to create a reproducable build environment for building our Operating System. Thus we start by creating docker image which is like a a snapshot of a linux machine with any extra software and files installed onto it.</p>
                 <p>Use the following command to build this docker image:</p>
                 <code>docker build buildenv -t myos-buildenv<br></code>
@@ -167,23 +167,23 @@
                         <code>docker run --rm -it -v "%cd%:/root/env" myos-buildenv</code>
                     </li>
                 </ul>
-                <a href=""><h4>Header.asm</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/boot/header.asm"><h4>Header.asm</h4></a>
                 <p>This files contains some majic data that is to be included in the Operating System binary. This majic data is neccesary so that the bootlooders can understand that we have an Operating System here that can be ran on the computer. We know that bootloaders core responsibilty is to locate an Operating System in whatever way possible. We followed the <i><b>multiboot2</b></i> specification which most bootloaders support.</p>
-                <a href=""><h4>Main.asm</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/boot/main.asm"><h4>Main.asm</h4></a>
                 <p>This is the entry point in our Operating System. This also hold the Page Tables and Stack assembly code.</p>
                 <a href=""><h4>Linker.ld</h4></a>
                 <p>This describes how to link our operating system. Basically it joins different files for smooth execution.</p>
                 <a href=""><h4>Grub.cfg</h4></a>
                 <p>It creates a iso file out if our operations system kernel binary. This iso file can then be used to boot up the Operating System from either a usb or from a hard disk.</p>
-                <a href=""><h4>Main64.asm</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/boot/main64.asm"><h4>Main64.asm</h4></a>
                 <p>This helps us make a 64-bit architecture for our Operation System.</p>
-                <a href=""><h4>Main.c</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/kernel/main.c"><h4>Main.c</h4></a>
                 <p>This file contains code that is being called by the assembly code in <i><b>main64.asm</b></i>. This file is going to be used if we want to print something (in this case "SEECS") on the output screen.</p>
-                <a href=""><h4>Print.h</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/intf/print.h"><h4>Print.h</h4></a>
                 <p>This file contains the declaration for our functions that we will be using in the main.c and aslso some other functions that are needed to fully implemetnt the printing logic.</p>
-                <a href=""><h4>Print.c</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/print.c"><h4>Print.c</h4></a>
                 <p>This file contains the definition of the functions that are declared in <i><b>print.h</b></i>.</p>
-                <a href=""><h4>Makefile</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/Makefile"><h4>Makefile</h4></a>
                 <p>This contains the commands for building our Operating System. This also akes sures that only files that have been modified get rebuilt so that it is extremly fast.</p>
                 <div>
                     <hr>
