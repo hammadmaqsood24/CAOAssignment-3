@@ -167,23 +167,23 @@
                         <code>docker run --rm -it -v "%cd%:/root/env" myos-buildenv</code>
                     </li>
                 </ul>
-                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/boot/header.asm"><h4>Header.asm</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/boot/header.asm" target="_blank"><h4>Header.asm</h4></a>
                 <p>This files contains some majic data that is to be included in the Operating System binary. This majic data is neccesary so that the bootlooders can understand that we have an Operating System here that can be ran on the computer. We know that bootloaders core responsibilty is to locate an Operating System in whatever way possible. We followed the <i><b>multiboot2</b></i> specification which most bootloaders support.</p>
-                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/boot/main.asm"><h4>Main.asm</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/boot/main.asm" target="_blank"><h4>Main.asm</h4></a>
                 <p>This is the entry point in our Operating System. This also hold the Page Tables and Stack assembly code.</p>
-                <a href=""><h4>Linker.ld</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/targets/x86_64/linker.ld" target="_blank"><h4>Linker.ld</h4></a>
                 <p>This describes how to link our operating system. Basically it joins different files for smooth execution.</p>
-                <a href=""><h4>Grub.cfg</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/targets/x86_64/iso/boot/grub/grub.cfg" target="_blank"><h4>Grub.cfg</h4></a>
                 <p>It creates a iso file out if our operations system kernel binary. This iso file can then be used to boot up the Operating System from either a usb or from a hard disk.</p>
-                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/boot/main64.asm"><h4>Main64.asm</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/boot/main64.asm" target="_blank"><h4>Main64.asm</h4></a>
                 <p>This helps us make a 64-bit architecture for our Operation System.</p>
-                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/kernel/main.c"><h4>Main.c</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/kernel/main.c" target="_blank"><h4>Main.c</h4></a>
                 <p>This file contains code that is being called by the assembly code in <i><b>main64.asm</b></i>. This file is going to be used if we want to print something (in this case "SEECS") on the output screen.</p>
-                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/intf/print.h"><h4>Print.h</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/intf/print.h" target="_blank"><h4>Print.h</h4></a>
                 <p>This file contains the declaration for our functions that we will be using in the main.c and aslso some other functions that are needed to fully implemetnt the printing logic.</p>
-                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/print.c"><h4>Print.c</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/src/impl/x86_64/print.c" target="_blank"><h4>Print.c</h4></a>
                 <p>This file contains the definition of the functions that are declared in <i><b>print.h</b></i>.</p>
-                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/Makefile"><h4>Makefile</h4></a>
+                <a href="https://github.com/hammadmaqsood24/CAOAssignment-3/blob/main/CAO%20OS%20Assignment/Makefile" target="_blank"><h4>Makefile</h4></a>
                 <p>This contains the commands for building our Operating System. This also akes sures that only files that have been modified get rebuilt so that it is extremly fast.</p>
                 <div>
                     <hr>
