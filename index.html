@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>CAO Operating System Assignment</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">SiteName</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#">Github Repository</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://my.indeed.com/p/muhammadhammadm-b3nzow8" target="_blank">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" style="padding-top: 50px;">
+        <main>
+            <h1>CAO Assignmnet#3</h1>
+            <p>Posted by <a href="#">Muhammad Hammad Maqsood</a> on <span class="glyphicon glyphicon-time"></span> 20 April, 2021</p>
+            <hr>
+            <div>
+                <img class="img-responsive" src="./imgs/output.JPG" alt="output image">
+                <hr>
+                <h2>Project Summary</h2>
+                <p>We wrote our own 64-bit x86 operating system kernel from scratch, which is multiboot2-compliant. We also made a basic stack, enable long mode, setup basic paging, and wrote some C code that prints any text onto the screen. But in this case we used the C code to print "SEECS" on the screen using asteriks. The Operating System is written primarily in C language but assembly language was also used for the hardware sopecific part.</p>
+            </div>
+            <div>
+                <h3>Pre Requisites</h3>
+                <p>Following Pre Requisites should be fulfilled before continuing</p>
+                <ul class="code">
+                    <li>WSL2 Installed</li>
+                    <li>HyperVX/Virtualization Enabled</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Tools Used</h3>
+                <p>We used the following tools to build our Operating System:</p>
+                <ul class="code">
+                    <li><b><u><i>Visual Studio Code:</i></u></b> A fairly light and powerful text editor</li>
+                    <li><b><u><i>Qemu:</i></u></b> A generic and open source machine emulator and virtualizer</li>
+                    <li><i><b><u>Docker:</u></b></i> An open platform for developing, shipping, and running applications </li>
+                </ul>
+            </div>
+            <div>
+                <h3>Languages Used</h3>
+                <p>We used the following languages to build our Operating System:</p>
+                <ul class="code">
+                    <li><b><u><i>Assembly Language</i></u></b> (*.asm)</li>
+                    <li><b><u><i>C Language</i></u></b> (*.c or *.h)</li>
+                </ul>
+            </div>
+            <div>
+                <hr>
+                <h2>Development Process</h2>
+                <p>For the sake of sanity we will first go through the hierarchy of files before starting as it can lead to errors with the code if the hierarchy of files are not as same as the tutorial.
+                </p>
+                <h3>Hierarchy of Files and Folders</h3>
+                <p>For ease we will create a hierarchinal order of files as shown bellow in the current root folder of the VS Code or a new folder that you want to be the main folder for the project. The filenames will be the same as shown in tutoral so that we wont be faced with unexoected errors later on.</p>
+                <div class="code">
+                    <ul>
+                        <li>buildenv
+                            <ul>
+                                <li class="file">Dockerfile</li>
+                            </ul>
+                        </li>
+                        <li>
+                            src
+                            <ul>
+                                <li>interface
+                                    <ul>
+                                        <li class="file">print.h</li>
+                                    </ul>
+                                </li>
+                                <li>implementation
+                                    <ul>
+                                        <li>kernel
+                                            <ul>
+                                                <li class="file">main.c</li>
+                                            </ul>
+                                        </li>
+                                        <li>x86_64
+                                            <ul>
+                                                <li class="file">print.c</li>
+                                                <li>boot
+                                                    <ul>
+                                                        <li class="file">header.asm</li>
+                                                        <li class="file">main.asm</li>
+                                                        <li class="file">main64.asm</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            targets
+                            <ul>
+                                <li>
+                                    x86_64
+                                    <ul>
+                                        <li class="file">linker.ld</li>
+                                        <li>iso
+                                            <ul>
+                                                <li>boot
+                                                    <ul>
+                                                        <li>grub
+                                                            <ul>
+                                                                <li class="file">grub.cfg</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="file">.gitignore</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="file">Makefile</li>
+                    </ul>
+                </div>
+                <br>
+                <p class="bg-warning text-white" style="padding-left: 4px; color:ral;">Files are coloured red. The rest are folders.</p>
+            </div>
+            <div>
+                <hr>
+                <h2>Files and Their Purpose</h2>
+                <p>We will briefly explain the purpose of each file one by one.</p>
+                <a href=""><h3>Dockerfile</h3></a>
+                <p>Docker allows us to create a reproducable build environment for building our Operating System. Thus we start by creating docker image which is like a a snapshot of a linux machine with any extra software and files installed onto it.</p>
+                <p>Use the following command to build this docker image:</p>
+                <code>docker build buildenv -t myos-buildenv<br></code>
+                <br>
+                <p class="bg-primary text-white" style="padding-left: 4px; color:ral;">Note: You need to have docker running in the background</p>
+                <p>Use one of the following command to build an instance of this docker image:</p>
+                <ul>
+                    <li>
+                        <p>For Windows Powershell VS Code Terminal:</p>
+                        <code>docker run --rm -it -v "${pwd}:/root/env" myos-buildenv</code>
+                    </li>
+                    <br>
+                    <li>
+                        <p>For Windows Commmand Prompt (CMD) VS Code Terminal:</p>
+                        <code>docker run --rm -it -v "%cd%:/root/env" myos-buildenv</code>
+                    </li>
+                </ul>
+                <a href=""><h4>Header.asm</h4></a>
+                <p>This files contains some majic data that is to be included in the Operating System binary. This majic data is neccesary so that the bootlooders can understand that we have an Operating System here that can be ran on the computer. We know that bootloaders core responsibilty is to locate an Operating System in whatever way possible. We followed the <i><b>multiboot2</b></i> specification which most bootloaders support.</p>
+                <a href=""><h4>Main.asm</h4></a>
+                <p>This is the entry point in our Operating System. This also hold the Page Tables and Stack assembly code.</p>
+                <a href=""><h4>Linker.ld</h4></a>
+                <p>This describes how to link our operating system. Basically it joins different files for smooth execution.</p>
+                <a href=""><h4>Grub.cfg</h4></a>
+                <p>It creates a iso file out if our operations system kernel binary. This iso file can then be used to boot up the Operating System from either a usb or from a hard disk.</p>
+                <a href=""><h4>Main64.asm</h4></a>
+                <p>This helps us make a 64-bit architecture for our Operation System.</p>
+                <a href=""><h4>Main.c</h4></a>
+                <p>This file contains code that is being called by the assembly code in <i><b>main64.asm</b></i>. This file is going to be used if we want to print something (in this case "SEECS") on the output screen.</p>
+                <a href=""><h4>Print.h</h4></a>
+                <p>This file contains the declaration for our functions that we will be using in the main.c and aslso some other functions that are needed to fully implemetnt the printing logic.</p>
+                <a href=""><h4>Print.c</h4></a>
+                <p>This file contains the definition of the functions that are declared in <i><b>print.h</b></i>.</p>
+                <a href=""><h4>Makefile</h4></a>
+                <p>This contains the commands for building our Operating System. This also akes sures that only files that have been modified get rebuilt so that it is extremly fast.</p>
+                <div>
+                    <hr>
+                    <h2>Errors and Their Solutions</h2>
+                    <p>Alot of errors were encountered during the Assignment but the ones worth mentioning are as follow:</p>
+                    <ul>
+                        <li>
+                            <h4>Error Message</h4>
+                                <p class="error">make *** No rule to make target 'build-x8_64'. Stop</p>
+                                <h4>Solution:</h4>
+                                <p class="soln">This error was caused by a syntax error. In my case I had written print_str() in declaraton and print_Str() in definition of function. Due to C language being Case-Sensetive both were treated differently and the compiler failed to get the definition of the print_str() function</p>
+                        </li>
+                        <li>
+                            <h4>Error Message</h4>
+                                <p class="error">make *** No rule to make target 'build-x8_64'. Stop</p>
+                                <h4>Solution:</h4>
+                                <p class="soln">This error was caused by a syntax error. In my case I had written print_str() in declaraton and print_Str() in definition of function. Due to C language being Case-Sensetive both were treated differently and the compiler failed to get the definition of the print_str() function</p>
+                        </li>
+                        <li>
+                            <h4>Error Message</h4>
+                                <p class="error">make *** No rule to make target 'build-x8_64'. Stop</p>
+                                <h4>Solution:</h4>
+                                <p class="soln">This error was caused by a syntax error. In my case I had written print_str() in declaraton and print_Str() in definition of function. Due to C language being Case-Sensetive both were treated differently and the compiler failed to get the definition of the print_str() function</p>
+                        </li>
+                    </ul>
+                </div>
+    
+            </div>
+        </main>
+    </div>
+    
+    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+crossorigin="anonymous"></script>
+</body>
+
+</html>
