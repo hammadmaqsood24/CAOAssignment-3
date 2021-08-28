@@ -4,8 +4,6 @@ This respository holds all the source code for [this YouTube tutorial series](ht
 
 You can find the revision for a specific episode on [this page](https://github.com/davidcallanan/yt-os-series/tags).
 
-Considering supporting this work via [my Patreon page](http://patreon.com/codepulse).
-
 ## Prerequisites
 
  - A text editor such as [VS Code](https://code.visualstudio.com/).
